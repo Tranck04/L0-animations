@@ -1,0 +1,41 @@
+{
+  "name": "@loumilab/mascot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "L° — moteur d’animation SVG et composant Vue de LOUMI°LAB",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vue-tsc --noEmit && vite build && node scripts/build-standalone.mjs && npm run build:lib",
+    "build:lib": "vite build --config vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/loumi.js"
+    },
+    "./vue": "./src/components/LoumiMascot.vue"
+  },
+  "files": [
+    "lib",
+    "src/components",
+    "src/mascot",
+    "src/assets",
+    "THIRD_PARTY_NOTICES.md",
+    "licenses"
+  ],
+  "dependencies": {
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "happy-dom": "^21.0.4",
+    "typescript": "~5.9.3",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.12",
+    "vue-tsc": "^3.3.9"
+  }
+}

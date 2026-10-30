@@ -1,0 +1,6 @@
+export { LoumiEngine } from './engine'
+export { idlePose, thinkingPose, successPose, POSES, REDUCED_POSES, SUCCESS_DURATION, TRANSITION_DURATION } from './poses'
+export { renderSvg, GEOMETRY, COLORS } from './svg'
+export { REST_POSE, POSE_KEYS } from './types'
+export { GESTURE_DURATIONS, REDUCED_GESTURE_DURATIONS, gesturePose } from './gestures'
+export type { MascotState, MascotFrame, PointerTarget, Pose, GestureId, GestureOptions, GesturePlayback, GestureResult, TransitionDirection, LoumiMascotHandle } from './types'
